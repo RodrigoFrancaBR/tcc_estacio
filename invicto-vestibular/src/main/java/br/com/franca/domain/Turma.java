@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor // cria automaticamente um construtor vazio (sem argumentos).
 @Data //cria automaticamente os métodos toString, equals, hashCode, getters e setters.
 @Entity
-public class Unidade {
+public class Turma {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,10 +23,6 @@ public class Unidade {
 	
 	@NotBlank(message = "Nome {fild.not.blank}")
 	private String nome;
-	
-	@NotBlank(message = "Endereço {fild.not.blank}")
-	private String endereco;
 	// @Default
-	private Situacao situacao;		
-
+	private Situacao situacao;
 }
