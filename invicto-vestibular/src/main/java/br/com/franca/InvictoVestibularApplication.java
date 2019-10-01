@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.support.ResourceBundleMessageSource;
 
+import br.com.franca.domain.Situacao;
 import br.com.franca.domain.Unidade;
 import br.com.franca.repository.UnidadeRepository;
 
@@ -26,7 +27,7 @@ public class InvictoVestibularApplication {
 				Unidade u = new Unidade();
 				u.setNome("usuario" + i);
 				u.setEndereco("endereco" + i);
-				u.setSituacao("ativa");				
+				u.setSituacao(Situacao.ATIVADA);				
 				return u;
 			}).map(v -> repository.save(v)).forEach(System.out::println);
 		};

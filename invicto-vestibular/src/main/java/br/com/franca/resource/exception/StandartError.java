@@ -23,4 +23,18 @@ public class StandartError {
 	public String getMsg() {
 		return msg;
 	}
+
+	public Long getTimeStamp() {
+		return timeStamp;
+	}
+
+	public void setTimeStamp(Long timeStamp) {
+		this.timeStamp = timeStamp;
+	}
+
+	public void setMsg(String msg) {
+		this.msg = msg;
+	}
+	
+	
 }
